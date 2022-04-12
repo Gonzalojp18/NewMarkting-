@@ -1,0 +1,49 @@
+@import '../general_base/maps';
+@import '../general_base/extends';
+
+.box-footer {
+    font-family: roboto,sans-serif;
+    @extend %twoposition;
+    background-image: url(../../Multimedia/recursos/contact-background.webp);
+    font-size: 1em;
+    color: map-get($body, colorshodow);
+    height: 20vh;
+.link{
+    width: 30%;
+        }
+.back{
+    a{
+        color: map-get($body, colorsection);
+        text-decoration: none;
+        }
+    }
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        font-size: 1em;
+        height: 50%;
+        color: map-get($body,colorshadow);
+.link{
+        width:100%;
+.redes{
+        display: flex;
+                }
+        }
+        }
+.nav-footer {
+    ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        li {
+            a{
+                color: map-get($body,colorshadow);
+                font-size: .8em;
+                text-decoration: none;
+            }
+        }
+    }
+}
+}
+

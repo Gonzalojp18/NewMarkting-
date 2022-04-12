@@ -1,0 +1,55 @@
+.bg-menu{
+    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+}
+
+.box-container {
+    @extend %twoposition;
+    img {
+        width: 10%;
+        #color-btn {
+        background-color: map-get($body,colorshodow);
+        border-radius: 20%;
+        }
+    }
+.nav-me {
+    ul {
+        li {
+            margin: 1rem;
+                a {
+                    color: map-get($body,colorshodow);
+                    text-decoration: none
+                }
+                    font-size: 1.6em;
+                        &:hover {
+                            transform: scale(.8);
+                            transition: .8s ease-in-out;
+                            border-radius: 10%;
+                            background-color:#C93205;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+
+    button {
+        position: absolute;
+        right: 1rem;
+        top: 10px;
+        background-color: map-get($body,colorshodow);
+    }
+    img {
+        width: 20%;
+    }
+    }
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    button {
+        position: absolute;
+        right: 1rem;
+        top: 20px;
+        background-color: map-get($body,colorshodow);
+    }
+    img {
+        width: 20%;
+    }
+}
+}

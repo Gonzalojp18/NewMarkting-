@@ -1,0 +1,15 @@
+@mixin box($width, $height, $margin){
+    width: $width;
+    height: $height;
+    margin: $margin;
+
+}
+
+@mixin card($position, $width, $height) {
+    position: $position;
+    width: $width;
+    height: $height;
+}
+
+
+

@@ -1,0 +1,68 @@
+@import '../general_base/mixin';
+
+.bg-contact {
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 30vh;
+        h1 {
+            font-size: 3em;
+            color: map-get($body, colorshodow);
+        }
+        p {
+            color: map-get($body, colorshodow);
+            font-size: 1.5em;
+        }
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    justify-content: center;
+    height: 20vh;
+        h1 {
+            font-size: 2em;
+            color: map-get($body, colorshodow);
+        }
+        p {
+            display: none;
+        }
+    }
+}
+main {
+    .form {
+        @extend %position;
+        height: 60vh;
+    }
+    .text {
+        @include box (40vw,5vh,10px);
+        border: 1px solid #0090;
+        background-color: map-get($body,colorshadow);
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    }
+    .textarea {
+        @include box (40vw,40vh,10px);
+        color: map-get($body,colorshadow);
+        border: 1px solid #0090;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    }
+    .submit {
+        input {
+            background-color: map-get($body,colorfront);
+            padding:5px 5px;
+            margin:10px;
+            font-size:1em;
+            border-radius:100px;
+            cursor:pointer;
+            border:1px transparent;
+            width: 100%;
+        }
+    }
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    height: 30%;
+}
+        .text {
+            @include box (80vw,10vh,10px);
+        }
+        .textarea {
+            @include box (80vw,30vh,10px);
+    }
+}

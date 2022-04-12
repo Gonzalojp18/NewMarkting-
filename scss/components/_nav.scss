@@ -1,0 +1,118 @@
+@import '../general_base/extends';
+    .animation {
+    height:100vh;
+    animation-name: header;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    @keyframes header {
+0% {
+    background-image: url("../../Multimedia/recursos/Animaciones/bg-image.webp");
+    background-position: center;
+}
+100% {
+    background-image: url("../../Multimedia/recursos/Animaciones/bg-image.webp");
+}
+    }
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    @keyframes header {
+    0% {
+        background-image: url("../../Multimedia/recursos/Animaciones/bg-image.webp");
+        background-position: center;
+        animation-duration: 30s;
+    }
+    100% {
+        background-image: url("../../Multimedia/recursos/Animaciones/bg-image.webp");
+    }
+        }
+            }
+                }
+    .box-main {
+        @extend %position;
+        height:60vh;
+        color: map-get($body, colorback);
+            h1{
+                font-size: 4em;
+                width:50%;
+            &:hover {
+                color: map-get($body, colorbasic);
+                transform: scaley(1.4);
+                transition: 4s ease-in-out;
+                background-color: map-get($body, colorshodow);
+            }
+        }
+    .linea-subtitle {
+        width: 26em;
+        font-size: 2em;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .subtitle {
+        animation: texto 5s;
+        animation-iteration-count: infinite;
+        span{
+            color: map-get($body, colorfront);
+            font-size: 1.5em;
+        }
+    }
+@keyframes texto {
+        from {
+            width: 0;
+            border-right-color: rgba(255, 255, 255, .75);
+        }
+        to {
+            width: 28em;
+            border-right-color: transparent;
+        }
+    }
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    height: 40vh;
+    color: map-get($body, colorbody);
+        h1{
+            width:80%;
+            font-size: 2em;
+            color: map-get($body, colorfront);
+            }
+        p {
+            display: none;
+            }
+    }
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    height:40vh;
+        h1{
+            font-size: 2em;
+            width:60%;
+    }
+    .linea-subtitle {
+        width: 24em;
+        font-size: 1em;
+    }
+    .subtitle {
+        animation: texto 5s;
+        animation-iteration-count: infinite;
+        span{
+            color: map-get($body, colorfront);
+            font-size: 2em;
+        }
+    }
+}
+    }
+    .box-icon {
+        margin: auto 4rem;
+        .icon:hover {
+            transform: scale(.8);
+            transition: .8s linear;
+            cursor: pointer;
+        }
+    .text-icon {
+        color: map-get($body, colorshodow);
+    }
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+            display: none;
+    }
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+        margin: auto 4rem;
+}
+}
